@@ -6,6 +6,8 @@
     <title>QISTIKA · NEURAL CERTIFICATE VAULT | FUTURISTIC PORTFOLIO</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- PDF.js for multi-page PDF rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -19,6 +21,246 @@
             color: #eef5ff;
             line-height: 1.5;
             overflow-x: hidden;
+            transition: background 0.45s ease, color 0.3s ease;
+        }
+
+        /* ----- LIGHT THEME — cohesive font colors (sebati) ----- */
+        body.light-theme {
+            background: radial-gradient(circle at 20% 30%, #f0f8ff, #d4e4f7);
+            color: #1a2a3a; /* base text — soft dark blue-grey */
+        }
+        body.light-theme .hero {
+            background: rgba(210, 230, 255, 0.7);
+            border-bottom: 1px solid #0a4b6e;
+        }
+        body.light-theme .hero h1 {
+            background: linear-gradient(135deg, #0a2a4a, #0a6e8a, #4a2a7a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        body.light-theme .hero-tag {
+            background: rgba(10, 110, 138, 0.15);
+            color: #0a4a6a;
+        }
+        body.light-theme .hero-detail {
+            color: #1a3a5a;
+        }
+        body.light-theme .hero-detail i {
+            color: #0a6e8a;
+            filter: drop-shadow(0 0 2px #0a6e8a);
+        }
+        body.light-theme .btn-neon {
+            background: rgba(10, 110, 138, 0.2);
+            border-color: #0a6e8a;
+            color: #0a4a6a;
+        }
+        body.light-theme .btn-neon:hover {
+            background: #0a6e8a;
+            color: #fff;
+            box-shadow: 0 0 20px #0a6e8a;
+        }
+        body.light-theme .tab-btn {
+            background: rgba(10, 110, 138, 0.12);
+            border-color: #0a6e8a;
+            color: #1a3a5a;
+        }
+        body.light-theme .tab-btn i {
+            color: #0a6e8a;
+        }
+        body.light-theme .tab-btn.active {
+            background: linear-gradient(125deg, #0a6e8a, #2a9fc9);
+            color: #fff;
+            border-color: #fff;
+        }
+        body.light-theme .tab-btn.active i {
+            color: #fff;
+        }
+        body.light-theme .tab-panel {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid #0a6e8a;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.08);
+            color: #1a2a3a;
+        }
+        body.light-theme .section-title-tab {
+            background: linear-gradient(135deg, #0a2a4a, #0a6e8a, #6a4a9e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        body.light-theme .glass-card,
+        body.light-theme .lead-card,
+        body.light-theme .cert-card,
+        body.light-theme .wheel-card {
+            background: rgba(240, 248, 255, 0.92);
+            border-color: #0a6e8a;
+            color: #1a2a3a;
+        }
+        body.light-theme .lead-card strong {
+            color: #0a4a6a;
+        }
+        body.light-theme .skill-badge {
+            background: rgba(10, 110, 138, 0.12);
+            border-color: #0a6e8a;
+            color: #1a3a5a;
+        }
+        body.light-theme .art-badge,
+        body.light-theme .vol-badge {
+            background: linear-gradient(125deg, rgba(10, 110, 138, 0.12), rgba(10, 70, 100, 0.18));
+            border-color: #0a6e8a;
+            color: #1a3a5a;
+        }
+        body.light-theme .art-badge:hover,
+        body.light-theme .vol-badge:hover {
+            background: #0a6e8a;
+            color: #fff;
+            box-shadow: 0 0 18px #0a6e8a;
+        }
+        body.light-theme .list-styled li {
+            color: #1a2a3a;
+        }
+        body.light-theme .list-styled li i {
+            color: #0a6e8a;
+        }
+        body.light-theme .cert-badge {
+            background: rgba(10, 110, 138, 0.2);
+            color: #0a4a6a;
+        }
+        body.light-theme .cert-card i {
+            color: #0a6e8a;
+            filter: drop-shadow(0 0 4px #0a6e8a);
+        }
+        body.light-theme .cert-note {
+            border-top-color: #0a6e8a;
+            color: #1a3a5a;
+        }
+        body.light-theme .contact-future {
+            background: rgba(255, 255, 255, 0.75);
+            border-color: #0a6e8a;
+            color: #1a2a3a;
+        }
+        body.light-theme .project-modal-content,
+        body.light-theme .cert-modal-content,
+        body.light-theme .art-modal-content,
+        body.light-theme .resume-modal-content {
+            background: #e6f0fa;
+            border-color: #0a6e8a;
+            color: #1a2a3a;
+        }
+        body.light-theme .project-modal-content h2,
+        body.light-theme .art-modal-title,
+        body.light-theme .cert-modal-title {
+            color: #0a4a6a;
+        }
+        body.light-theme .project-modal-tech span {
+            background: rgba(10, 110, 138, 0.15);
+            color: #0a3a5a;
+        }
+        body.light-theme .project-desc {
+            color: #1a2a3a;
+        }
+        body.light-theme .project-achievement {
+            background: rgba(10, 110, 138, 0.12);
+            border-left-color: #0a6e8a;
+            color: #0a3a5a;
+        }
+        body.light-theme .modal-close,
+        body.light-theme .art-modal-close,
+        body.light-theme .cert-modal-close,
+        body.light-theme .resume-close {
+            color: #0a6e8a;
+        }
+        body.light-theme .modal-close:hover,
+        body.light-theme .art-modal-close:hover,
+        body.light-theme .cert-modal-close:hover,
+        body.light-theme .resume-close:hover {
+            color: #0a2a4a;
+            text-shadow: 0 0 15px #0a6e8a;
+        }
+        body.light-theme .pdf-controls button {
+            background: rgba(10, 110, 138, 0.12);
+            border-color: #0a6e8a;
+            color: #0a3a5a;
+        }
+        body.light-theme .pdf-controls button:hover {
+            background: #0a6e8a;
+            color: #fff;
+        }
+        body.light-theme .pdf-controls span {
+            color: #1a3a5a;
+        }
+        body.light-theme .pill {
+            background: rgba(10, 110, 138, 0.15);
+            color: #0a3a5a;
+        }
+        body.light-theme .info-trigger {
+            background: rgba(10, 110, 138, 0.12);
+            color: #0a4a6a;
+        }
+        body.light-theme .info-trigger:hover {
+            background: #0a6e8a;
+            color: #fff;
+        }
+        body.light-theme .ctrl-btn {
+            background: rgba(10, 110, 138, 0.15);
+            border-color: #0a6e8a;
+            color: #0a4a6a;
+        }
+        body.light-theme .ctrl-btn:hover {
+            background: #0a6e8a;
+            color: #fff;
+            box-shadow: 0 0 20px #0a6e8a;
+        }
+        body.light-theme .active-label {
+            background: rgba(10, 110, 138, 0.15);
+            color: #0a4a6a;
+        }
+        body.light-theme footer {
+            border-top-color: rgba(10, 110, 138, 0.3);
+            color: #1a3a5a;
+        }
+        body.light-theme .gallery-hint {
+            background: rgba(10, 110, 138, 0.1);
+            color: #0a4a6a;
+        }
+        body.light-theme .theme-toggle {
+            background: rgba(10, 110, 138, 0.15);
+            border-color: #0a6e8a;
+            color: #0a4a6a;
+        }
+        body.light-theme .theme-toggle:hover {
+            background: #0a6e8a;
+            color: #fff;
+            box-shadow: 0 0 30px #0a6e8a;
+        }
+        body.light-theme ::-webkit-scrollbar-track {
+            background: #c0d8e8;
+        }
+        body.light-theme ::-webkit-scrollbar-thumb {
+            background: #0a6e8a;
+            box-shadow: 0 0 6px #0a6e8a;
+        }
+        body.light-theme .hero::after {
+            background: linear-gradient(90deg, transparent, #0a6e8a, #b02e9e, #0a6e8a, transparent);
+        }
+        body.light-theme .tab-bar {
+            border-bottom-color: rgba(10, 110, 138, 0.3);
+        }
+        body.light-theme .cert-card h3 {
+            color: #0a4a6a;
+        }
+        body.light-theme .cert-card p {
+            color: #1a3a5a;
+        }
+        body.light-theme .wheel-card h3 {
+            color: #0a4a6a;
+        }
+        body.light-theme .wheel-card p {
+            color: #1a3a5a;
+        }
+        body.light-theme .art-modal-content p,
+        body.light-theme .cert-modal-content p {
+            color: #1a3a5a;
         }
 
         /* futuristic scanline + glitch */
@@ -55,6 +297,7 @@
             border-bottom: 1px solid rgba(0, 255, 255, 0.6);
             backdrop-filter: blur(2px);
             overflow: hidden;
+            transition: background 0.4s ease, border-color 0.3s ease;
         }
         .hero::after {
             content: '';
@@ -129,6 +372,7 @@
             font-family: 'Orbitron', monospace;
             font-size: 0.85rem;
             backdrop-filter: blur(10px);
+            cursor: pointer;
         }
         .btn-neon:hover {
             background: #0ff;
@@ -138,7 +382,39 @@
             border-color: white;
         }
 
-        /* TABS - more holographic */
+        /* theme toggle button */
+        .theme-toggle-wrap {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 16px 24px 0;
+        }
+        .theme-toggle {
+            background: rgba(0, 20, 40, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1.5px solid #0ff;
+            color: #0ff;
+            padding: 10px 22px;
+            border-radius: 60px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+        .theme-toggle:hover {
+            background: #0ff;
+            color: #000;
+            box-shadow: 0 0 30px cyan;
+            transform: scale(1.02);
+        }
+
+        /* TABS */
         .tabs-wrapper {
             max-width: 1400px;
             margin: 0 auto;
@@ -198,6 +474,7 @@
             backdrop-filter: blur(8px);
             border: 1px solid rgba(0, 255, 255, 0.3);
             box-shadow: 0 20px 35px -15px rgba(0,0,0,0.6);
+            transition: background 0.4s, border-color 0.3s, box-shadow 0.3s;
         }
         .tab-panel.active-panel {
             display: block;
@@ -219,7 +496,7 @@
             letter-spacing: -0.5px;
         }
 
-        /* Skills matrix neon */
+        /* Skills */
         .skills-grid {
             display: flex;
             flex-wrap: wrap;
@@ -240,7 +517,6 @@
             transform: scale(1.02);
         }
 
-        /* leadership */
         .lead-card {
             background: rgba(10, 20, 35, 0.7);
             backdrop-filter: blur(8px);
@@ -256,7 +532,6 @@
             transform: translateX(6px);
         }
 
-        /* two col */
         .two-col {
             display: flex;
             flex-wrap: wrap;
@@ -271,7 +546,6 @@
             border: 1px solid rgba(0, 255, 255, 0.5);
         }
 
-        /* clickable badges */
         .badge-container {
             display: flex;
             flex-wrap: wrap;
@@ -326,7 +600,7 @@
             backdrop-filter: blur(4px);
         }
 
-        /* CERTIFICATE VAULT - futuristic cards */
+        /* CERTIFICATE VAULT */
         .edu-grid {
             display: flex;
             flex-wrap: wrap;
@@ -394,7 +668,7 @@
             padding-top: 20px;
         }
 
-        /* PROJECT WHEEL - hyperdrive */
+        /* PROJECT WHEEL */
         .wheel-container {
             position: relative;
             display: flex;
@@ -499,7 +773,7 @@
             border-radius: 60px;
         }
 
-        /* MODAL - futuristic glass FOR PROJECT DETAILS + JOB ASAP UI */
+        /* MODALS */
         .project-modal, .art-modal {
             display: none;
             position: fixed;
@@ -658,6 +932,121 @@
             font-size: 0.75rem;
         }
 
+        /* RESUME MODAL (PDF viewer) */
+        .resume-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.97);
+            backdrop-filter: blur(16px);
+            z-index: 5000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .resume-modal-content {
+            max-width: 900px;
+            width: 94%;
+            max-height: 92vh;
+            background: #0d1428;
+            border-radius: 48px;
+            padding: 28px;
+            border: 2px solid cyan;
+            box-shadow: 0 0 80px rgba(0, 255, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            cursor: default;
+            position: relative;
+        }
+        .resume-close {
+            position: sticky;
+            top: 0;
+            align-self: flex-end;
+            font-size: 40px;
+            color: cyan;
+            cursor: pointer;
+            transition: 0.2s;
+            background: transparent;
+            border: none;
+            z-index: 10;
+            line-height: 1;
+        }
+        .resume-close:hover {
+            color: white;
+            text-shadow: 0 0 20px cyan;
+            transform: rotate(90deg);
+        }
+        .pdf-viewer-container {
+            flex: 1;
+            overflow-y: auto;
+            max-height: 75vh;
+            padding-right: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .pdf-viewer-container::-webkit-scrollbar {
+            width: 5px;
+        }
+        .pdf-viewer-container::-webkit-scrollbar-thumb {
+            background: cyan;
+            border-radius: 10px;
+        }
+        .pdf-page {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0,255,255,0.2);
+            max-width: 100%;
+            height: auto;
+            border: 1px solid rgba(0,255,255,0.4);
+        }
+        .pdf-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            padding: 16px 0 8px;
+            border-top: 1px solid rgba(0,255,255,0.2);
+            margin-top: 12px;
+        }
+        .pdf-controls button {
+            background: rgba(0, 255, 255, 0.15);
+            border: 1px solid cyan;
+            color: cyan;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .pdf-controls button:hover {
+            background: cyan;
+            color: #000;
+            box-shadow: 0 0 20px cyan;
+        }
+        .pdf-controls span {
+            color: #bbd4ff;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+        }
+        .pdf-loading {
+            color: cyan;
+            font-family: 'Orbitron', monospace;
+            padding: 40px;
+            text-align: center;
+            animation: pulse 1.2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+
         @media (max-width: 780px) {
             .tab-btn { padding: 6px 14px; font-size: 0.7rem;}
             .hero h1 { font-size: 1.8rem; }
@@ -665,14 +1054,21 @@
             .wheel-3d { width: 260px; height: 260px; }
             .section-title-tab { font-size: 1.4rem;}
             .art-modal-content img { max-height: 50vh; }
+            .resume-modal-content { padding: 16px; }
+            .pdf-viewer-container { max-height: 65vh; }
         }
     </style>
 </head>
 <body>
 
+<!-- THEME TOGGLE -->
+<div class="theme-toggle-wrap">
+    <button class="theme-toggle" id="themeToggle"><i class="fas fa-adjust"></i> DARK MODE</button>
+</div>
+
 <header>
     <div class="hero">
-        <img src="images\profile.png" width='140' height='140' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230a142f' stroke='%2300ffff' stroke-width='2'/%3E%3Ctext x='50' y='67' font-size='32' text-anchor='middle' fill='cyan' font-family='monospace'%3E⚡%3C/text%3E%3C/svg%3E" alt="profile avatar" class="profile-img">
+        <img src="images/profile.png" width='140' height='140' alt="profile avatar" class="profile-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22140%22 height=%22140%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%230a142f%22 stroke=%22%2300ffff%22 stroke-width=%222%22/%3E%3Ctext x=%2250%22 y=%2267%22 font-size=%2232%22 text-anchor=%22middle%22 fill=%22cyan%22 font-family=%22monospace%22%3E⚡%3C/text%3E%3C/svg%3E'">
         <h1>SHARIFAH NUR QISTIKA</h1>
         <div class="hero-tag">✦ BACHELOR OF COMPUTER SCIENCE ✦ SOFTWARE ENGINEERING</div>
         <div class="hero-detail">
@@ -680,7 +1076,8 @@
             <span><i class="fas fa-phone-alt"></i> +60 11-74901808</span>
             <span><i class="fas fa-envelope"></i> qistika05@gmail.com</span>
         </div>
-        <a href="#" class="btn-neon" id="exploreEduTab"><i class="fas fa-graduation-cap"></i> ACCESS CERTIFICATE VAULT</a>
+        <!-- RESUME BUTTON: opens multi-page PDF -->
+        <button class="btn-neon" id="openResumeBtn"><i class="fas fa-file-pdf"></i> OPEN RESUME (PDF)</button>
     </div>
 </header>
 
@@ -780,8 +1177,36 @@
 <!-- CERTIFICATE MODAL -->
 <div id="certModal" class="cert-modal"><div class="cert-modal-content"><span class="cert-modal-close" id="closeCertModal">&times;</span><img id="certModalImg" src="" alt="Certificate"><div id="certModalTitle" class="cert-modal-title"></div><p id="certModalDesc" style="margin-top:12px; color:#bbd4ff;"></p></div></div>
 
+<!-- RESUME MODAL (multi-page PDF viewer) -->
+<div id="resumeModal" class="resume-modal">
+    <div class="resume-modal-content">
+        <button class="resume-close" id="closeResumeBtn">&times;</button>
+        <div class="pdf-viewer-container" id="pdfViewerContainer">
+            <div class="pdf-loading"><i class="fas fa-spinner fa-spin"></i> LOADING RESUME...</div>
+        </div>
+        <div class="pdf-controls" id="pdfControls" style="display:none;">
+            <button id="pdfPrev"><i class="fas fa-chevron-left"></i> PREV</button>
+            <span id="pdfPageInfo">1 / 1</span>
+            <button id="pdfNext">NEXT <i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</div>
+
 <script>
-    // -------- PROJECT WHEEL DATA (with JobAsap) ----------
+    // -------- THEME TOGGLE ----------
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        if (document.body.classList.contains('light-theme')) {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i> LIGHT MODE';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i> DARK MODE';
+        }
+    });
+    // set default
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i> DARK MODE';
+
+    // -------- PROJECT WHEEL DATA ----------
     const projects = [
         { name: "JobAsap", tech: ["Android Java", "Material UI"], shortDesc: "Freelance job matching app.", longDesc: "Native Android app with real-time alerts, profile management, and enhanced UX. Real-time job notifications, user matching, and portfolio showcase.", achievements: "📈 30% engagement increase — boosted active users and session duration." },
         { name: "Nasi Ayam Kukus DB", tech: ["MySQL", "Triggers"], shortDesc: "Inventory & transaction DB.", longDesc: "Full relational DB for food business, sales analytics, automated stock management.", achievements: "Reduced mismatch by 60%." },
@@ -846,7 +1271,7 @@
     if (window.innerWidth < 800) radius = 240;
     renderWheel();
 
-    // -------- INTERACTIVE ARTS & VOLUNTEERING GALLERY (clickable badges) ----------
+    // -------- ARTS & VOLUNTEERING GALLERY ----------
     const artsItems = [
         { name: "🎭 Rentasi Magika / Fiesta Warisan (Aesthetic Lead)", img: "images/rentasi.jpg", caption: "Aesthetic direction & cultural showcase — Rentasi Magika & Fiesta Warisan." },
         { name: "🥁 Boria & Dikir Barat Performance (FESENI)", img: "images/dikirbarat.jpg", caption: "Tournament performer: Traditional Boria & Dikir Barat at FESENI competition." },
@@ -871,7 +1296,7 @@
     artsItems.forEach(item => { const badge = document.createElement('div'); badge.className = 'art-badge'; badge.innerHTML = `<i class="fas fa-image"></i> ${item.name.split('(')[0].trim()}`; badge.addEventListener('click', () => openArtModal(item)); artsContainer.appendChild(badge); });
     volunteerItems.forEach(item => { const badge = document.createElement('div'); badge.className = 'vol-badge'; badge.innerHTML = `<i class="fas fa-hand-sparkles"></i> ${item.name.split('·')[0].trim() || item.name.substring(0, 28)}`; badge.addEventListener('click', () => openArtModal(item)); volContainer.appendChild(badge); });
 
-    // -------- CERTIFICATE MODAL (unchanged) ----------
+    // -------- CERTIFICATE MODAL ----------
     const certificateData = {
         bse: { title: "Bachelor of Software Engineering", desc: "Official enrollment & progress certificate · University of Malaya (2024 - current). Expected graduation 2028.", imgUrl: "images/degree.png" },
         foundation: { title: "Foundation in Physical Sciences (CGPA 4.00)", desc: "Excellence award · University of Malaya. Achieved perfect CGPA 4.00 and MUET Band 4.", imgUrl: "images/pasum.png" },
@@ -884,11 +1309,83 @@
     closeCertModalBtn?.addEventListener('click', closeCertModalFunc);
     certModalElem?.addEventListener('click', (e) => { if(e.target === certModalElem) closeCertModalFunc(); });
 
+    // -------- RESUME MODAL (multi-page PDF) ----------
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+    const resumeModal = document.getElementById('resumeModal');
+    const openResumeBtn = document.getElementById('openResumeBtn');
+    const closeResumeBtn = document.getElementById('closeResumeBtn');
+    const pdfContainer = document.getElementById('pdfViewerContainer');
+    const pdfControls = document.getElementById('pdfControls');
+    const pdfPageInfo = document.getElementById('pdfPageInfo');
+    const pdfPrev = document.getElementById('pdfPrev');
+    const pdfNext = document.getElementById('pdfNext');
+
+    let pdfDoc = null;
+    let currentPage = 1;
+    let totalPages = 0;
+    const PDF_URL = 'resume.pdf';
+
+    function renderPage(pageNum) {
+        if (!pdfDoc) return;
+        pdfDoc.getPage(pageNum).then(page => {
+            const scale = 1.4;
+            const viewport = page.getViewport({ scale: scale });
+            const canvas = document.createElement('canvas');
+            canvas.className = 'pdf-page';
+            const context = canvas.getContext('2d');
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            const renderContext = { canvasContext: context, viewport: viewport };
+            page.render(renderContext).promise.then(() => {
+                const existingCanvas = pdfContainer.querySelector('canvas');
+                if (existingCanvas) existingCanvas.remove();
+                const loadingEl = pdfContainer.querySelector('.pdf-loading');
+                if (loadingEl) loadingEl.remove();
+                pdfContainer.appendChild(canvas);
+                pdfPageInfo.innerText = `${pageNum} / ${totalPages}`;
+                pdfControls.style.display = 'flex';
+            });
+        });
+    }
+
+    function loadPDF() {
+        pdfContainer.innerHTML = `<div class="pdf-loading"><i class="fas fa-spinner fa-spin"></i> LOADING RESUME...</div>`;
+        pdfControls.style.display = 'none';
+        pdfjsLib.getDocument(PDF_URL).promise.then(pdf => {
+            pdfDoc = pdf;
+            totalPages = pdf.numPages;
+            currentPage = 1;
+            renderPage(currentPage);
+        }).catch(err => {
+            pdfContainer.innerHTML = `<div style="color:#ff6b6b; text-align:center; padding:40px; font-family:'Orbitron',monospace;">
+                <i class="fas fa-exclamation-triangle"></i> ERROR LOADING PDF.<br>
+                <span style="font-size:0.8rem; opacity:0.7;">Make sure 'resume.pdf' exists in the same folder.</span>
+            </div>`;
+            console.error('PDF load error:', err);
+        });
+    }
+
+    function openResume() {
+        resumeModal.style.display = 'flex';
+        loadPDF();
+    }
+    function closeResume() {
+        resumeModal.style.display = 'none';
+        pdfContainer.innerHTML = `<div class="pdf-loading"><i class="fas fa-spinner fa-spin"></i> LOADING RESUME...</div>`;
+        pdfControls.style.display = 'none';
+        pdfDoc = null;
+    }
+    openResumeBtn?.addEventListener('click', openResume);
+    closeResumeBtn?.addEventListener('click', closeResume);
+    resumeModal?.addEventListener('click', (e) => { if(e.target === resumeModal) closeResume(); });
+    pdfPrev?.addEventListener('click', () => { if (pdfDoc && currentPage > 1) { currentPage--; renderPage(currentPage); } });
+    pdfNext?.addEventListener('click', () => { if (pdfDoc && currentPage < totalPages) { currentPage++; renderPage(currentPage); } });
+
     // TAB switching
     const tabBtns = document.querySelectorAll('.tab-btn'), panels = document.querySelectorAll('.tab-panel');
     function switchTab(tabId){ panels.forEach(p=>p.classList.remove('active-panel')); document.getElementById(tabId)?.classList.add('active-panel'); tabBtns.forEach(btn=>btn.classList.remove('active')); const activeBtn = Array.from(tabBtns).find(btn=>btn.dataset.tab === tabId); if(activeBtn) activeBtn.classList.add('active'); }
     tabBtns.forEach(btn=>{ btn.addEventListener('click',()=>{ const tid = btn.dataset.tab; if(tid) switchTab(tid); }); });
-    document.getElementById('exploreEduTab')?.addEventListener('click', (e)=>{ e.preventDefault(); switchTab('tab-education'); });
     switchTab('tab-projects');
 </script>
 </body>
