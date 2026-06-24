@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>QISTIKA · NEURAL CERTIFICATE VAULT | FUTURISTIC PORTFOLIO</title>
+    <title>QISTIKA · PORTFOLIO</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- PDF.js for multi-page PDF rendering -->
@@ -17,59 +17,59 @@
 
         body {
             font-family: 'Space Grotesk', 'Inter', sans-serif;
-            background: radial-gradient(circle at 20% 30%, #010514, #000000);
-            color: #eef5ff;
+            background: radial-gradient(circle at 20% 30%, #1a2a3a, #0a1a2a);
+            color: #f0f8ff;
             line-height: 1.5;
             overflow-x: hidden;
             transition: background 0.45s ease, color 0.3s ease;
         }
 
-        /* ----- LIGHT THEME — cohesive font colors (sebati) ----- */
+        /* ----- LIGHT THEME — toy story pastel ----- */
         body.light-theme {
-            background: radial-gradient(circle at 20% 30%, #f0f8ff, #d4e4f7);
-            color: #1a2a3a; /* base text — soft dark blue-grey */
+            background: radial-gradient(circle at 20% 30%, #e8f4f8, #b8d8e8);
+            color: #1a2a3a;
         }
         body.light-theme .hero {
-            background: rgba(210, 230, 255, 0.7);
-            border-bottom: 1px solid #0a4b6e;
+            background: rgba(200, 230, 255, 0.7);
+            border-bottom: 1px solid #c0392b;
         }
         body.light-theme .hero h1 {
-            background: linear-gradient(135deg, #0a2a4a, #0a6e8a, #4a2a7a);
+            background: linear-gradient(135deg, #c0392b, #f39c12, #2ecc71, #2980b9);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
         body.light-theme .hero-tag {
-            background: rgba(10, 110, 138, 0.15);
-            color: #0a4a6a;
+            background: rgba(192, 57, 43, 0.15);
+            color: #a93226;
         }
         body.light-theme .hero-detail {
-            color: #1a3a5a;
+            color: #1a2a3a;
         }
         body.light-theme .hero-detail i {
-            color: #0a6e8a;
-            filter: drop-shadow(0 0 2px #0a6e8a);
+            color: #c0392b;
+            filter: drop-shadow(0 0 2px #c0392b);
         }
         body.light-theme .btn-neon {
-            background: rgba(10, 110, 138, 0.2);
-            border-color: #0a6e8a;
-            color: #0a4a6a;
+            background: rgba(192, 57, 43, 0.2);
+            border-color: #c0392b;
+            color: #a93226;
         }
         body.light-theme .btn-neon:hover {
-            background: #0a6e8a;
+            background: #c0392b;
             color: #fff;
-            box-shadow: 0 0 20px #0a6e8a;
+            box-shadow: 0 0 20px #c0392b;
         }
         body.light-theme .tab-btn {
-            background: rgba(10, 110, 138, 0.12);
-            border-color: #0a6e8a;
-            color: #1a3a5a;
+            background: rgba(192, 57, 43, 0.12);
+            border-color: #c0392b;
+            color: #1a2a3a;
         }
         body.light-theme .tab-btn i {
-            color: #0a6e8a;
+            color: #c0392b;
         }
         body.light-theme .tab-btn.active {
-            background: linear-gradient(125deg, #0a6e8a, #2a9fc9);
+            background: linear-gradient(125deg, #c0392b, #e67e22);
             color: #fff;
             border-color: #fff;
         }
@@ -77,13 +77,13 @@
             color: #fff;
         }
         body.light-theme .tab-panel {
-            background: rgba(255, 255, 255, 0.75);
-            border: 1px solid #0a6e8a;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid #c0392b;
             box-shadow: 0 20px 35px -10px rgba(0,0,0,0.08);
             color: #1a2a3a;
         }
         body.light-theme .section-title-tab {
-            background: linear-gradient(135deg, #0a2a4a, #0a6e8a, #6a4a9e);
+            background: linear-gradient(135deg, #c0392b, #f39c12, #2ecc71, #2980b9);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -93,177 +93,177 @@
         body.light-theme .cert-card,
         body.light-theme .wheel-card {
             background: rgba(240, 248, 255, 0.92);
-            border-color: #0a6e8a;
+            border-color: #c0392b;
             color: #1a2a3a;
         }
         body.light-theme .lead-card strong {
-            color: #0a4a6a;
+            color: #a93226;
         }
         body.light-theme .skill-badge {
-            background: rgba(10, 110, 138, 0.12);
-            border-color: #0a6e8a;
-            color: #1a3a5a;
+            background: rgba(192, 57, 43, 0.12);
+            border-color: #c0392b;
+            color: #1a2a3a;
         }
         body.light-theme .art-badge,
         body.light-theme .vol-badge {
-            background: linear-gradient(125deg, rgba(10, 110, 138, 0.12), rgba(10, 70, 100, 0.18));
-            border-color: #0a6e8a;
-            color: #1a3a5a;
+            background: linear-gradient(125deg, rgba(192, 57, 43, 0.12), rgba(41, 128, 185, 0.18));
+            border-color: #c0392b;
+            color: #1a2a3a;
         }
         body.light-theme .art-badge:hover,
         body.light-theme .vol-badge:hover {
-            background: #0a6e8a;
+            background: #c0392b;
             color: #fff;
-            box-shadow: 0 0 18px #0a6e8a;
+            box-shadow: 0 0 18px #c0392b;
         }
         body.light-theme .list-styled li {
             color: #1a2a3a;
         }
         body.light-theme .list-styled li i {
-            color: #0a6e8a;
+            color: #c0392b;
         }
         body.light-theme .cert-badge {
-            background: rgba(10, 110, 138, 0.2);
-            color: #0a4a6a;
+            background: rgba(192, 57, 43, 0.2);
+            color: #a93226;
         }
         body.light-theme .cert-card i {
-            color: #0a6e8a;
-            filter: drop-shadow(0 0 4px #0a6e8a);
+            color: #c0392b;
+            filter: drop-shadow(0 0 4px #c0392b);
         }
         body.light-theme .cert-note {
-            border-top-color: #0a6e8a;
-            color: #1a3a5a;
+            border-top-color: #c0392b;
+            color: #1a2a3a;
         }
         body.light-theme .contact-future {
-            background: rgba(255, 255, 255, 0.75);
-            border-color: #0a6e8a;
+            background: rgba(255, 255, 255, 0.85);
+            border-color: #c0392b;
             color: #1a2a3a;
         }
         body.light-theme .project-modal-content,
         body.light-theme .cert-modal-content,
         body.light-theme .art-modal-content,
         body.light-theme .resume-modal-content {
-            background: #e6f0fa;
-            border-color: #0a6e8a;
+            background: #e8f4f8;
+            border-color: #c0392b;
             color: #1a2a3a;
         }
         body.light-theme .project-modal-content h2,
         body.light-theme .art-modal-title,
         body.light-theme .cert-modal-title {
-            color: #0a4a6a;
+            color: #a93226;
         }
         body.light-theme .project-modal-tech span {
-            background: rgba(10, 110, 138, 0.15);
-            color: #0a3a5a;
+            background: rgba(192, 57, 43, 0.15);
+            color: #1a2a3a;
         }
         body.light-theme .project-desc {
             color: #1a2a3a;
         }
         body.light-theme .project-achievement {
-            background: rgba(10, 110, 138, 0.12);
-            border-left-color: #0a6e8a;
-            color: #0a3a5a;
+            background: rgba(192, 57, 43, 0.12);
+            border-left-color: #c0392b;
+            color: #1a2a3a;
         }
         body.light-theme .modal-close,
         body.light-theme .art-modal-close,
         body.light-theme .cert-modal-close,
         body.light-theme .resume-close {
-            color: #0a6e8a;
+            color: #c0392b;
         }
         body.light-theme .modal-close:hover,
         body.light-theme .art-modal-close:hover,
         body.light-theme .cert-modal-close:hover,
         body.light-theme .resume-close:hover {
-            color: #0a2a4a;
-            text-shadow: 0 0 15px #0a6e8a;
+            color: #1a2a3a;
+            text-shadow: 0 0 15px #c0392b;
         }
         body.light-theme .pdf-controls button {
-            background: rgba(10, 110, 138, 0.12);
-            border-color: #0a6e8a;
-            color: #0a3a5a;
+            background: rgba(192, 57, 43, 0.12);
+            border-color: #c0392b;
+            color: #1a2a3a;
         }
         body.light-theme .pdf-controls button:hover {
-            background: #0a6e8a;
+            background: #c0392b;
             color: #fff;
         }
         body.light-theme .pdf-controls span {
-            color: #1a3a5a;
+            color: #1a2a3a;
         }
         body.light-theme .pill {
-            background: rgba(10, 110, 138, 0.15);
-            color: #0a3a5a;
+            background: rgba(192, 57, 43, 0.15);
+            color: #1a2a3a;
         }
         body.light-theme .info-trigger {
-            background: rgba(10, 110, 138, 0.12);
-            color: #0a4a6a;
+            background: rgba(192, 57, 43, 0.12);
+            color: #a93226;
         }
         body.light-theme .info-trigger:hover {
-            background: #0a6e8a;
+            background: #c0392b;
             color: #fff;
         }
         body.light-theme .ctrl-btn {
-            background: rgba(10, 110, 138, 0.15);
-            border-color: #0a6e8a;
-            color: #0a4a6a;
+            background: rgba(192, 57, 43, 0.15);
+            border-color: #c0392b;
+            color: #a93226;
         }
         body.light-theme .ctrl-btn:hover {
-            background: #0a6e8a;
+            background: #c0392b;
             color: #fff;
-            box-shadow: 0 0 20px #0a6e8a;
+            box-shadow: 0 0 20px #c0392b;
         }
         body.light-theme .active-label {
-            background: rgba(10, 110, 138, 0.15);
-            color: #0a4a6a;
+            background: rgba(192, 57, 43, 0.15);
+            color: #a93226;
         }
         body.light-theme footer {
-            border-top-color: rgba(10, 110, 138, 0.3);
-            color: #1a3a5a;
+            border-top-color: rgba(192, 57, 43, 0.3);
+            color: #1a2a3a;
         }
         body.light-theme .gallery-hint {
-            background: rgba(10, 110, 138, 0.1);
-            color: #0a4a6a;
+            background: rgba(192, 57, 43, 0.1);
+            color: #a93226;
         }
         body.light-theme .theme-toggle {
-            background: rgba(10, 110, 138, 0.15);
-            border-color: #0a6e8a;
-            color: #0a4a6a;
+            background: rgba(192, 57, 43, 0.15);
+            border-color: #c0392b;
+            color: #a93226;
         }
         body.light-theme .theme-toggle:hover {
-            background: #0a6e8a;
+            background: #c0392b;
             color: #fff;
-            box-shadow: 0 0 30px #0a6e8a;
+            box-shadow: 0 0 30px #c0392b;
         }
         body.light-theme ::-webkit-scrollbar-track {
-            background: #c0d8e8;
+            background: #b8d8e8;
         }
         body.light-theme ::-webkit-scrollbar-thumb {
-            background: #0a6e8a;
-            box-shadow: 0 0 6px #0a6e8a;
+            background: #c0392b;
+            box-shadow: 0 0 6px #c0392b;
         }
         body.light-theme .hero::after {
-            background: linear-gradient(90deg, transparent, #0a6e8a, #b02e9e, #0a6e8a, transparent);
+            background: linear-gradient(90deg, transparent, #c0392b, #f39c12, #c0392b, transparent);
         }
         body.light-theme .tab-bar {
-            border-bottom-color: rgba(10, 110, 138, 0.3);
+            border-bottom-color: rgba(192, 57, 43, 0.3);
         }
         body.light-theme .cert-card h3 {
-            color: #0a4a6a;
+            color: #a93226;
         }
         body.light-theme .cert-card p {
-            color: #1a3a5a;
+            color: #1a2a3a;
         }
         body.light-theme .wheel-card h3 {
-            color: #0a4a6a;
+            color: #a93226;
         }
         body.light-theme .wheel-card p {
-            color: #1a3a5a;
+            color: #1a2a3a;
         }
         body.light-theme .art-modal-content p,
         body.light-theme .cert-modal-content p {
-            color: #1a3a5a;
+            color: #1a2a3a;
         }
 
-        /* futuristic scanline + glitch */
+        /* toy story scanline */
         body::before {
             content: "";
             position: fixed;
@@ -271,7 +271,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: repeating-linear-gradient(0deg, rgba(0, 255, 255, 0.02) 0px, rgba(0, 255, 255, 0.02) 2px, transparent 2px, transparent 6px);
+            background: repeating-linear-gradient(0deg, rgba(255, 215, 0, 0.02) 0px, rgba(255, 215, 0, 0.02) 2px, transparent 2px, transparent 6px);
             pointer-events: none;
             z-index: 999;
         }
@@ -280,21 +280,21 @@
             width: 5px;
         }
         ::-webkit-scrollbar-track {
-            background: #0a0f1f;
+            background: #0a1a2a;
         }
         ::-webkit-scrollbar-thumb {
-            background: #0ff;
+            background: #f39c12;
             border-radius: 10px;
-            box-shadow: 0 0 6px cyan;
+            box-shadow: 0 0 6px #f39c12;
         }
 
-        /* HERO - NEON GLASS */
+        /* HERO - TOY STORY GLASS */
         .hero {
             position: relative;
             text-align: center;
             padding: 70px 20px 50px;
-            background: radial-gradient(ellipse at 50% 0%, #0a142f80, #000000);
-            border-bottom: 1px solid rgba(0, 255, 255, 0.6);
+            background: radial-gradient(ellipse at 50% 0%, #1a3a5a80, #000000);
+            border-bottom: 1px solid rgba(243, 156, 18, 0.8);
             backdrop-filter: blur(2px);
             overflow: hidden;
             transition: background 0.4s ease, border-color 0.3s ease;
@@ -306,7 +306,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, cyan, #ff00cc, cyan, transparent);
+            background: linear-gradient(90deg, transparent, #f39c12, #2ecc71, #f39c12, transparent);
             filter: blur(3px);
         }
         .profile-img {
@@ -314,31 +314,31 @@
             height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #0ff;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 8px #0ff;
+            border: 2px solid #f39c12;
+            box-shadow: 0 0 30px rgba(243, 156, 18, 0.8), 0 0 8px #f39c12;
             transition: 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
         .profile-img:hover {
-            transform: scale(1.02) rotate(1deg);
-            box-shadow: 0 0 50px cyan;
+            transform: scale(1.02) rotate(2deg);
+            box-shadow: 0 0 50px #f39c12;
         }
         .hero h1 {
             font-family: 'Orbitron', monospace;
             font-size: 2.5rem;
-            background: linear-gradient(135deg, #ffffff, #0ff, #c084fc);
+            background: linear-gradient(135deg, #f1c40f, #e67e22, #2ecc71, #3498db);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             letter-spacing: 3px;
-            text-shadow: 0 0 8px rgba(0,255,255,0.3);
+            text-shadow: 0 0 8px rgba(243, 156, 18, 0.3);
         }
         .hero-tag {
             font-family: 'Orbitron', monospace;
-            color: #7df9ff;
+            color: #f1c40f;
             font-size: 0.85rem;
             letter-spacing: 2px;
             word-break: keep-all;
-            background: rgba(0, 255, 255, 0.1);
+            background: rgba(243, 156, 18, 0.1);
             display: inline-block;
             padding: 4px 16px;
             border-radius: 40px;
@@ -354,16 +354,16 @@
             font-size: 0.85rem;
         }
         .hero-detail i {
-            color: #0ff;
-            filter: drop-shadow(0 0 4px cyan);
+            color: #f39c12;
+            filter: drop-shadow(0 0 4px #f39c12);
         }
         .btn-neon {
             display: inline-flex;
             align-items: center;
             gap: 10px;
             background: rgba(0, 20, 40, 0.7);
-            border: 1.5px solid #0ff;
-            color: #0ff;
+            border: 1.5px solid #f39c12;
+            color: #f1c40f;
             padding: 10px 32px;
             border-radius: 60px;
             font-weight: bold;
@@ -375,14 +375,14 @@
             cursor: pointer;
         }
         .btn-neon:hover {
-            background: #0ff;
+            background: #f39c12;
             color: #000;
-            box-shadow: 0 0 28px cyan;
+            box-shadow: 0 0 28px #f39c12;
             transform: translateY(-3px);
             border-color: white;
         }
 
-        /* theme toggle button */
+        /* theme toggle */
         .theme-toggle-wrap {
             display: flex;
             justify-content: flex-end;
@@ -393,8 +393,8 @@
         .theme-toggle {
             background: rgba(0, 20, 40, 0.6);
             backdrop-filter: blur(12px);
-            border: 1.5px solid #0ff;
-            color: #0ff;
+            border: 1.5px solid #f39c12;
+            color: #f1c40f;
             padding: 10px 22px;
             border-radius: 60px;
             font-family: 'Orbitron', monospace;
@@ -405,12 +405,12 @@
             gap: 10px;
             cursor: pointer;
             transition: 0.25s;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(243, 156, 18, 0.2);
         }
         .theme-toggle:hover {
-            background: #0ff;
+            background: #f39c12;
             color: #000;
-            box-shadow: 0 0 30px cyan;
+            box-shadow: 0 0 30px #f39c12;
             transform: scale(1.02);
         }
 
@@ -427,12 +427,12 @@
             gap: 14px;
             margin: 40px 0 30px;
             padding-bottom: 15px;
-            border-bottom: 1px solid rgba(0, 255, 255, 0.4);
+            border-bottom: 1px solid rgba(243, 156, 18, 0.5);
         }
         .tab-btn {
             background: rgba(0, 20, 40, 0.6);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(0, 255, 255, 0.6);
+            border: 1px solid rgba(243, 156, 18, 0.6);
             padding: 12px 28px;
             border-radius: 60px;
             font-family: 'Orbitron', monospace;
@@ -447,22 +447,22 @@
             letter-spacing: 0.5px;
         }
         .tab-btn i {
-            color: #0ff;
+            color: #f39c12;
         }
         .tab-btn.active {
-            background: linear-gradient(125deg, #0ff, #00aaff);
+            background: linear-gradient(125deg, #f39c12, #e67e22);
             color: #010101;
             border-color: #fff;
-            box-shadow: 0 0 20px cyan, inset 0 1px 1px rgba(255,255,255,0.3);
+            box-shadow: 0 0 20px #f39c12, inset 0 1px 1px rgba(255,255,255,0.3);
         }
         .tab-btn.active i {
             color: #000;
         }
         .tab-btn:hover:not(.active) {
-            background: rgba(0, 255, 255, 0.25);
+            background: rgba(243, 156, 18, 0.25);
             transform: translateY(-3px);
-            border-color: cyan;
-            box-shadow: 0 0 12px cyan;
+            border-color: #f39c12;
+            box-shadow: 0 0 12px #f39c12;
         }
         .tab-panel {
             display: none;
@@ -472,7 +472,7 @@
             padding: 36px 32px;
             margin-bottom: 60px;
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(0, 255, 255, 0.3);
+            border: 1px solid rgba(243, 156, 18, 0.3);
             box-shadow: 0 20px 35px -15px rgba(0,0,0,0.6);
             transition: background 0.4s, border-color 0.3s, box-shadow 0.3s;
         }
@@ -486,10 +486,10 @@
         .section-title-tab {
             font-family: 'Orbitron', monospace;
             font-size: 1.9rem;
-            border-left: 5px solid #0ff;
+            border-left: 5px solid #f39c12;
             padding-left: 24px;
             margin-bottom: 35px;
-            background: linear-gradient(135deg, #fff, #0ff, #aa88ff);
+            background: linear-gradient(135deg, #fff, #f39c12, #2ecc71);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -503,8 +503,8 @@
             gap: 14px;
         }
         .skill-badge {
-            background: rgba(0, 255, 255, 0.08);
-            border: 1px solid rgba(0, 255, 255, 0.6);
+            background: rgba(243, 156, 18, 0.08);
+            border: 1px solid rgba(243, 156, 18, 0.6);
             padding: 8px 26px;
             border-radius: 40px;
             backdrop-filter: blur(4px);
@@ -512,23 +512,23 @@
             transition: 0.2s;
         }
         .skill-badge:hover {
-            background: rgba(0, 255, 255, 0.3);
-            box-shadow: 0 0 10px cyan;
+            background: rgba(243, 156, 18, 0.3);
+            box-shadow: 0 0 10px #f39c12;
             transform: scale(1.02);
         }
 
         .lead-card {
             background: rgba(10, 20, 35, 0.7);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(0, 255, 255, 0.3);
+            border: 1px solid rgba(243, 156, 18, 0.3);
             border-radius: 32px;
             padding: 20px 24px;
             margin-bottom: 20px;
             transition: 0.2s;
         }
         .lead-card:hover {
-            border-color: #0ff;
-            box-shadow: 0 0 18px rgba(0, 255, 255, 0.3);
+            border-color: #f39c12;
+            box-shadow: 0 0 18px rgba(243, 156, 18, 0.3);
             transform: translateX(6px);
         }
 
@@ -543,7 +543,7 @@
             backdrop-filter: blur(12px);
             border-radius: 36px;
             padding: 28px;
-            border: 1px solid rgba(0, 255, 255, 0.5);
+            border: 1px solid rgba(243, 156, 18, 0.5);
         }
 
         .badge-container {
@@ -553,8 +553,8 @@
             margin: 24px 0 20px;
         }
         .art-badge, .vol-badge {
-            background: linear-gradient(125deg, rgba(0, 255, 255, 0.15), rgba(0, 100, 255, 0.2));
-            border: 1px solid #0ff;
+            background: linear-gradient(125deg, rgba(243, 156, 18, 0.15), rgba(46, 204, 113, 0.2));
+            border: 1px solid #f39c12;
             padding: 10px 20px;
             border-radius: 60px;
             font-family: 'Orbitron', monospace;
@@ -567,9 +567,9 @@
             letter-spacing: 0.5px;
         }
         .art-badge:hover, .vol-badge:hover {
-            background: #0ff;
+            background: #f39c12;
             color: #000;
-            box-shadow: 0 0 18px cyan;
+            box-shadow: 0 0 18px #f39c12;
             transform: scale(1.03);
             border-color: white;
         }
@@ -585,14 +585,14 @@
             font-size: 0.9rem;
         }
         .list-styled li i {
-            color: #0ff;
+            color: #f39c12;
             width: 24px;
         }
         .gallery-hint {
             text-align: center;
             margin-top: 30px;
             font-size: 0.8rem;
-            background: rgba(0, 255, 255, 0.1);
+            background: rgba(243, 156, 18, 0.1);
             display: inline-block;
             width: auto;
             padding: 8px 24px;
@@ -614,7 +614,7 @@
             backdrop-filter: blur(12px);
             border-radius: 40px;
             padding: 30px;
-            border: 1px solid rgba(0, 255, 255, 0.6);
+            border: 1px solid rgba(243, 156, 18, 0.6);
             transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             cursor: pointer;
             position: relative;
@@ -627,7 +627,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(243, 156, 18, 0.2), transparent);
             transition: left 0.6s;
         }
         .cert-card:hover::before {
@@ -635,14 +635,14 @@
         }
         .cert-card:hover {
             transform: translateY(-10px);
-            border-color: #0ff;
-            box-shadow: 0 0 32px rgba(0, 255, 255, 0.5);
+            border-color: #f39c12;
+            box-shadow: 0 0 32px rgba(243, 156, 18, 0.5);
         }
         .cert-card i {
             font-size: 2.8rem;
-            color: #0ff;
+            color: #f39c12;
             margin-bottom: 20px;
-            filter: drop-shadow(0 0 6px cyan);
+            filter: drop-shadow(0 0 6px #f39c12);
         }
         .cert-card h3 {
             font-family: 'Orbitron', monospace;
@@ -651,7 +651,7 @@
         }
         .cert-badge {
             display: inline-block;
-            background: rgba(0, 255, 255, 0.2);
+            background: rgba(243, 156, 18, 0.2);
             border-radius: 60px;
             padding: 5px 14px;
             font-size: 0.7rem;
@@ -664,7 +664,7 @@
             text-align: center;
             font-size: 0.8rem;
             opacity: 0.8;
-            border-top: 1px dashed cyan;
+            border-top: 1px dashed #f39c12;
             padding-top: 20px;
         }
 
@@ -693,7 +693,7 @@
             background: rgba(8, 18, 38, 0.95);
             backdrop-filter: blur(16px);
             border-radius: 32px;
-            border: 1px solid rgba(0, 255, 255, 0.8);
+            border: 1px solid rgba(243, 156, 18, 0.8);
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -702,8 +702,8 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
         .wheel-card:hover {
-            border-color: cyan;
-            box-shadow: 0 0 24px cyan;
+            border-color: #f39c12;
+            box-shadow: 0 0 24px #f39c12;
             transform: scale(1.02);
         }
         .pill-tech {
@@ -713,7 +713,7 @@
             margin: 12px 0;
         }
         .pill {
-            background: rgba(0, 255, 255, 0.2);
+            background: rgba(243, 156, 18, 0.2);
             border-radius: 40px;
             padding: 3px 12px;
             font-size: 0.7rem;
@@ -721,20 +721,20 @@
         }
         .info-trigger {
             margin-top: auto;
-            background: rgba(0, 255, 255, 0.15);
+            background: rgba(243, 156, 18, 0.15);
             border: none;
             padding: 8px;
             border-radius: 40px;
-            color: cyan;
+            color: #f39c12;
             font-weight: bold;
             font-size: 0.75rem;
             cursor: pointer;
             transition: 0.2s;
         }
         .info-trigger:hover {
-            background: cyan;
+            background: #f39c12;
             color: black;
-            box-shadow: 0 0 12px cyan;
+            box-shadow: 0 0 12px #f39c12;
         }
         .wheel-controls {
             display: flex;
@@ -743,9 +743,9 @@
             margin: 20px 0;
         }
         .ctrl-btn {
-            background: rgba(0, 255, 255, 0.2);
-            border: 1px solid cyan;
-            color: cyan;
+            background: rgba(243, 156, 18, 0.2);
+            border: 1px solid #f39c12;
+            color: #f39c12;
             width: 48px;
             height: 48px;
             border-radius: 50%;
@@ -754,16 +754,16 @@
             transition: 0.2s;
         }
         .ctrl-btn:hover {
-            background: cyan;
+            background: #f39c12;
             color: black;
-            box-shadow: 0 0 20px cyan;
+            box-shadow: 0 0 20px #f39c12;
             transform: scale(1.07);
         }
         .active-label {
             text-align: center;
             font-family: 'Orbitron', monospace;
             font-size: 0.8rem;
-            color: #0ff;
+            color: #f39c12;
             letter-spacing: 1px;
             background: rgba(0,0,0,0.5);
             display: inline-block;
@@ -794,8 +794,8 @@
             background: #0a1020dd;
             border-radius: 56px;
             padding: 32px;
-            border: 2px solid cyan;
-            box-shadow: 0 0 70px rgba(0, 255, 255, 0.5);
+            border: 2px solid #f39c12;
+            box-shadow: 0 0 70px rgba(243, 156, 18, 0.5);
             text-align: left;
             animation: zoomFade 0.25s ease;
             cursor: default;
@@ -808,14 +808,14 @@
             max-width: 100%;
             max-height: 60vh;
             border-radius: 32px;
-            border: 1px solid cyan;
+            border: 1px solid #f39c12;
             margin: 20px 0;
-            box-shadow: 0 0 20px rgba(0,255,255,0.4);
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
         }
         .art-modal-title {
             font-family: 'Orbitron', monospace;
             font-size: 1.7rem;
-            color: #0ff;
+            color: #f39c12;
         }
         .project-modal-tech {
             display: flex;
@@ -824,7 +824,7 @@
             margin: 18px 0;
         }
         .project-modal-tech span {
-            background: rgba(0, 255, 255, 0.2);
+            background: rgba(243, 156, 18, 0.2);
             padding: 5px 16px;
             border-radius: 40px;
             font-size: 0.8rem;
@@ -837,8 +837,8 @@
             color: #ccf0ff;
         }
         .project-achievement {
-            background: rgba(0, 255, 255, 0.15);
-            border-left: 4px solid #0ff;
+            background: rgba(243, 156, 18, 0.15);
+            border-left: 4px solid #f39c12;
             padding: 14px 18px;
             border-radius: 24px;
             margin-top: 20px;
@@ -849,13 +849,13 @@
             top: 24px;
             right: 36px;
             font-size: 44px;
-            color: cyan;
+            color: #f39c12;
             cursor: pointer;
             transition: 0.2s;
         }
         .modal-close:hover, .art-modal-close:hover {
             color: white;
-            text-shadow: 0 0 15px cyan;
+            text-shadow: 0 0 15px #f39c12;
         }
 
         @keyframes zoomFade {
@@ -883,8 +883,8 @@
             background: #0a1020dd;
             border-radius: 56px;
             padding: 20px;
-            border: 2px solid cyan;
-            box-shadow: 0 0 70px rgba(0, 255, 255, 0.5);
+            border: 2px solid #f39c12;
+            box-shadow: 0 0 70px rgba(243, 156, 18, 0.5);
             text-align: center;
             animation: zoomFade 0.25s ease;
             cursor: default;
@@ -893,12 +893,12 @@
             max-width: 100%;
             max-height: 65vh;
             border-radius: 28px;
-            border: 1px solid cyan;
+            border: 1px solid #f39c12;
             margin-bottom: 15px;
         }
         .cert-modal-title {
             font-family: 'Orbitron', monospace;
-            color: #0ff;
+            color: #f39c12;
             font-size: 1.4rem;
         }
         .cert-modal-close {
@@ -906,13 +906,13 @@
             top: 24px;
             right: 36px;
             font-size: 44px;
-            color: cyan;
+            color: #f39c12;
             cursor: pointer;
             transition: 0.2s;
         }
         .cert-modal-close:hover {
             color: white;
-            text-shadow: 0 0 15px cyan;
+            text-shadow: 0 0 15px #f39c12;
         }
 
         .contact-future {
@@ -922,13 +922,13 @@
             background: rgba(0, 0, 0, 0.6);
             border-radius: 48px;
             padding: 40px;
-            border: 1px solid cyan;
+            border: 1px solid #f39c12;
             backdrop-filter: blur(8px);
         }
         footer {
             text-align: center;
             padding: 30px;
-            border-top: 1px solid rgba(0, 255, 255, 0.3);
+            border-top: 1px solid rgba(243, 156, 18, 0.3);
             font-size: 0.75rem;
         }
 
@@ -954,8 +954,8 @@
             background: #0d1428;
             border-radius: 48px;
             padding: 28px;
-            border: 2px solid cyan;
-            box-shadow: 0 0 80px rgba(0, 255, 255, 0.3);
+            border: 2px solid #f39c12;
+            box-shadow: 0 0 80px rgba(243, 156, 18, 0.3);
             display: flex;
             flex-direction: column;
             cursor: default;
@@ -966,7 +966,7 @@
             top: 0;
             align-self: flex-end;
             font-size: 40px;
-            color: cyan;
+            color: #f39c12;
             cursor: pointer;
             transition: 0.2s;
             background: transparent;
@@ -976,7 +976,7 @@
         }
         .resume-close:hover {
             color: white;
-            text-shadow: 0 0 20px cyan;
+            text-shadow: 0 0 20px #f39c12;
             transform: rotate(90deg);
         }
         .pdf-viewer-container {
@@ -993,16 +993,16 @@
             width: 5px;
         }
         .pdf-viewer-container::-webkit-scrollbar-thumb {
-            background: cyan;
+            background: #f39c12;
             border-radius: 10px;
         }
         .pdf-page {
             background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 0 30px rgba(0,255,255,0.2);
+            box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
             max-width: 100%;
             height: auto;
-            border: 1px solid rgba(0,255,255,0.4);
+            border: 1px solid rgba(243, 156, 18, 0.4);
         }
         .pdf-controls {
             display: flex;
@@ -1010,13 +1010,13 @@
             align-items: center;
             gap: 24px;
             padding: 16px 0 8px;
-            border-top: 1px solid rgba(0,255,255,0.2);
+            border-top: 1px solid rgba(243, 156, 18, 0.2);
             margin-top: 12px;
         }
         .pdf-controls button {
-            background: rgba(0, 255, 255, 0.15);
-            border: 1px solid cyan;
-            color: cyan;
+            background: rgba(243, 156, 18, 0.15);
+            border: 1px solid #f39c12;
+            color: #f39c12;
             padding: 8px 18px;
             border-radius: 40px;
             font-family: 'Orbitron', monospace;
@@ -1025,9 +1025,9 @@
             transition: 0.2s;
         }
         .pdf-controls button:hover {
-            background: cyan;
+            background: #f39c12;
             color: #000;
-            box-shadow: 0 0 20px cyan;
+            box-shadow: 0 0 20px #f39c12;
         }
         .pdf-controls span {
             color: #bbd4ff;
@@ -1035,7 +1035,7 @@
             font-size: 0.8rem;
         }
         .pdf-loading {
-            color: cyan;
+            color: #f39c12;
             font-family: 'Orbitron', monospace;
             padding: 40px;
             text-align: center;
@@ -1068,7 +1068,7 @@
 
 <header>
     <div class="hero">
-        <img src="images/profile.png" width='140' height='140' alt="profile avatar" class="profile-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22140%22 height=%22140%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%230a142f%22 stroke=%22%2300ffff%22 stroke-width=%222%22/%3E%3Ctext x=%2250%22 y=%2267%22 font-size=%2232%22 text-anchor=%22middle%22 fill=%22cyan%22 font-family=%22monospace%22%3E⚡%3C/text%3E%3C/svg%3E'">
+        <img src="images/profile.png" width='140' height='140' alt="profile avatar" class="profile-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22140%22 height=%22140%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%231a3a5a%22 stroke=%22%23f39c12%22 stroke-width=%222%22/%3E%3Ctext x=%2250%22 y=%2267%22 font-size=%2232%22 text-anchor=%22middle%22 fill=%22%23f39c12%22 font-family=%22monospace%22%3E🧸%3C/text%3E%3C/svg%3E'">
         <h1>SHARIFAH NUR QISTIKA</h1>
         <div class="hero-tag">✦ BACHELOR OF COMPUTER SCIENCE ✦ SOFTWARE ENGINEERING</div>
         <div class="hero-detail">
@@ -1077,23 +1077,23 @@
             <span><i class="fas fa-envelope"></i> qistika05@gmail.com</span>
         </div>
         <!-- RESUME BUTTON: opens multi-page PDF -->
-        <button class="btn-neon" id="openResumeBtn"><i class="files/CV LATEST.pdf"></i> OPEN RESUME</button>
+        <button class="btn-neon" id="openResumeBtn"><i class="fas fa-file-pdf"></i> OPEN RESUME (PDF)</button>
     </div>
 </header>
 
 <div class="tabs-wrapper">
     <div class="tab-bar">
-        <div class="tab-btn active" data-tab="tab-projects"><i class="fas fa-cogs"></i> PROJECT WHEEL</div>
-        <div class="tab-btn" data-tab="tab-skills"><i class="fas fa-microchip"></i> TECH MATRIX</div>
+        <div class="tab-btn active" data-tab="tab-projects"><i class="fas fa-cogs"></i> PROJECT</div>
+        <div class="tab-btn" data-tab="tab-skills"><i class="fas fa-microchip"></i> SKILLS</div>
         <div class="tab-btn" data-tab="tab-leadership"><i class="fas fa-users"></i> LEADERSHIP</div>
         <div class="tab-btn" data-tab="tab-culture"><i class="fas fa-palette"></i> ARTS</div>
-        <div class="tab-btn" data-tab="tab-education"><i class="fas fa-certificate"></i> CERTIFICATE VAULT</div>
+        <div class="tab-btn" data-tab="tab-education"><i class="fas fa-certificate"></i> CERTIFICATE </div>
         <div class="tab-btn" data-tab="tab-contact"><i class="fas fa-globe"></i> CONNECT</div>
     </div>
 
     <!-- PROJECT WHEEL TAB -->
     <div id="tab-projects" class="tab-panel active-panel">
-        <h2 class="section-title-tab"><i class="fas fa-sync-alt fa-spin"></i> PROJECT NEXUS</h2>
+        <h2 class="section-title-tab"><i class="fas fa-sync-alt fa-spin"></i> PROJECT WHEEL</h2>
         <div class="wheel-container"><div class="wheel-3d" id="wheel3d"></div></div>
         <div class="wheel-controls"><button class="ctrl-btn" id="prevWheel"><i class="fas fa-chevron-left"></i></button><button class="ctrl-btn" id="nextWheel"><i class="fas fa-chevron-right"></i></button></div>
         <div class="active-label" id="wheelLabel">🌀 DRAG TO ROTATE | CLICK CARD FOR DETAILS</div>
@@ -1101,7 +1101,7 @@
 
     <!-- SKILLS -->
     <div id="tab-skills" class="tab-panel">
-        <h2 class="section-title-tab">⚡ TECH MATRIX</h2>
+        <h2 class="section-title-tab">⚡ SKILLS</h2>
         <div class="skills-grid">
             <span class="skill-badge">Java/Kotlin</span><span class="skill-badge">Python</span><span class="skill-badge">SQL</span>
             <span class="skill-badge">Android Studio</span><span class="skill-badge">HTML/CSS/JS</span><span class="skill-badge">Git/GitHub</span>
@@ -1143,12 +1143,12 @@
                 </ul>
             </div>
         </div>
-        <div class="gallery-hint"><i class="fas fa-camera"></i> ✦ CLICK ANY NEON BADGE ABOVE — immersive gallery with real moments ✦</div>
+        <div class="gallery-hint"><i class="fas fa-camera"></i> ✦ CLICK ANY BADGE ABOVE — immersive gallery with real moments ✦</div>
     </div>
 
     <!-- CERTIFICATE VAULT - CLICKABLE FUTURISTIC -->
     <div id="tab-education" class="tab-panel">
-        <h2 class="section-title-tab"><i class="fas fa-certificate"></i> █ CERTIFICATE VAULT · HOVER & CLICK █</h2>
+        <h2 class="section-title-tab"><i class="fas fa-certificate"></i> █ CERTIFICATE · HOVER & CLICK █</h2>
         <div class="edu-grid">
             <div class="cert-card" data-cert="bse"><i class="fas fa-laptop-code"></i><h3>Bachelor of Software Engineering</h3><p>University of Malaya | 2024 – current</p><p>Specializing in Software Engineering · Advanced Programming</p><div class="cert-badge"><i class="fas fa-shield-alt"></i> VERIFIABLE</div></div>
             <div class="cert-card" data-cert="foundation"><i class="fas fa-chart-line"></i><h3>Foundation in Physical Sciences</h3><p>University of Malaya | CGPA 4.00 · MUET Band 4</p><p>Graduated with excellence award · 2024</p><div class="cert-badge"><i class="fas fa-award"></i> PERFECT CGPA</div></div>
@@ -1164,7 +1164,7 @@
         <div><strong><i class="fas fa-address-card"></i> PROFESSIONAL REFERENCES</strong><br/>Dr. Chiam Yin Kia · yinkia@um.edu.my<br/>Mr. Khalid Asri · 012-9511103<br/>Mr. Md Khairul Azwan · md.khairul@um.edu.my</div></div>
     </div>
 </div>
-<footer><p>© 2026 Sharifah Nur Qistika — Neural Portfolio</p></footer>
+<footer><p>© 2026 Sharifah Nur Qistika — Toy Story Portfolio</p></footer>
 
 <!-- MODAL FOR PROJECT DETAILS -->
 <div id="projectModal" class="project-modal">
@@ -1324,7 +1324,7 @@
     let pdfDoc = null;
     let currentPage = 1;
     let totalPages = 0;
-    const PDF_URL = 'files/CV LATEST.pdf';
+    const PDF_URL = 'resume.pdf';
 
     function renderPage(pageNum) {
         if (!pdfDoc) return;
